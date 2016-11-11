@@ -1,0 +1,17 @@
+
+<form (submit)="addMessage($event)">
+  <input type="text" name="myvoice" [(ngModel)]="myvoice">
+  <input type="text" name="whoami" [(ngModel)]="whoami">
+  <button>Add</button>
+</form>
+
+<ul>
+  <li *ngFor="let msg of messages | async">
+    {{msg.myVoice}} {{msg.whoAmI}} <input type="button" value="delete" (click)="removeMessage(msg)">
+  </li>
+</ul>
+<ul>
+  <li *ngFor="let item of message">
+    {{items.myVoice}}
+  </li>
+</ul>
